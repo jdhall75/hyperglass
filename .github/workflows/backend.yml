@@ -25,7 +25,7 @@ jobs:
 
             - name: Install OS dependencies
               run: |
-                    apt install libcairo2-dev clang -y
+                    sudo apt-get install libcairo2-dev clang -y
 
             - name: Install Python
               uses: actions/setup-python@v5
