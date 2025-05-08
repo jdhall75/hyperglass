@@ -11,7 +11,7 @@ jobs:
         name: Backend Tests
         strategy:
             fail-fast: false
-            matrix:
+            matrix::
                 node-version: [20, 22]
                 pnpm-version: [9, 10]
                 redis-version: [latest]
@@ -22,6 +22,10 @@ jobs:
         steps:
             - name: Git Checkout
               uses: actions/checkout@v3
+
+            - name: Install OS dependencies
+              run: |
+                    apt install libcairo2-dev clang -y
 
             - name: Install Python
               uses: actions/setup-python@v5
