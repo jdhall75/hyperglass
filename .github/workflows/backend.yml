@@ -41,8 +41,6 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: ${{ matrix.node-version }}
-                  cache: 'pnpm'
-
 
             - name: Start Redis
               uses: supercharge/redis-github-action@1.7.0
